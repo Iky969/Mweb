@@ -1,0 +1,18 @@
+Buat web music player bernama "Aura" dengan gaya liquid glass.
+
+Fungsional:
+- Search bar yang memanggil Deezer API (endpoint /search) lewat backend proxy Express agar tidak kena CORS
+- Tampilkan hasil dalam kartu glass: cover, judul, artis, durasi
+- Klik hasil → putar preview 30 detik pakai <audio>, dengan kontrol play/pause, seek bar, volume, dan queue
+- Ambil warna dominan cover dengan fast-average-color, jadikan mesh gradient background yang bertransisi halus saat ganti lagu
+
+Visual:
+- Background: gradient pastel dari warna cover + 3 liquid blob yang bergerak lambat
+- Player bar di bawah dan panel hasil pakai glassmorphism: backdrop-blur-xl, bg-white/10, border-white/20, shadow lembut
+- Cover album besar di tengah dengan efek blur di belakangnya
+- Font Inter, animasi masuk hasil pencarian dengan Framer Motion (stagger)
+- HINDARI: neon, cyan/magenta, grid, font monospace, gaya cyberpunk
+
+Stack: Vite + React + Tailwind + Framer Motion, backend Express di folder /server
+Setelah selesai, jalankan frontend dan backend, buka di browser, coba search "Coldplay" dan screenshot hasilnya.
+
